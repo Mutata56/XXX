@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "options_page": "options.html",
+  "name": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX – Смены",
+  "version": "1.0",
+  "description": "Фичи для XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "permissions": ["storage", "scripting", "alarms", "tabs"],
+"host_permissions": ["XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"],
+  "content_scripts": [
+    {
+      "matches": ["XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"],
+      "js": ["shared.js", "sync.js"],
+      "css": ["copy.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"],
+      "js": ["content.js"],
+      "css": ["styles.css","copy.css"]
+    },
+	{
+		"matches": ["XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"],
+		  "js": ["shared.js", "dashboardMonitor.js"],
+		  "run_at": "document_idle"
+	},
+	{
+  "matches": ["XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"],
+  "js": ["shared.js", "activity.js"],
+  "css": ["styles.css", "copy.css"],
+  "run_at": "document_idle"
+}
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}
